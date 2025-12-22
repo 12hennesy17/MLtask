@@ -91,13 +91,13 @@ def health() -> dict[str, str]:
     }
 
 
-# ---------- Заглушка /quality по агрегированным признакам ----------
+# ---------- Созданнач заглушка quality-flags-from-cs по агрегированным признакам ----------
 
 @app.post(
     "/quality-flags-from-csv",
     response_model=QualityResponse,
     tags=["quality"],
-    summary="Оценка качества по CSV-файлу с использованием EDA-ядра",
+    summary="Метрики качества csv-файла",
 )
 async def quality_flags_from_csv(file: UploadFile = File(...)) -> QualityResponse:
     """
@@ -158,6 +158,9 @@ async def quality_flags_from_csv(file: UploadFile = File(...)) -> QualityRespons
         flags=flags_bool,
         dataset_shape={"n_rows": n_rows, "n_cols": n_cols},
     )
+
+# ---------- Заглушка /quality по агрегированным признакам ----------
+
 
 @app.post("/quality", response_model=QualityResponse, tags=["quality"])
 def quality(req: QualityRequest) -> QualityResponse:
