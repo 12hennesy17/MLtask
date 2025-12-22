@@ -251,10 +251,12 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
 - читает его в `pandas.DataFrame`;
 - вызывает функции из `eda_cli.core`:
 
-  - `summarize_dataset`,
-  - `missing_table`,
-  - `compute_quality_flags`;
+**Пример запроса:**
 
+```http
+POST /quality-flags-from-csv
+Content-Type: application/json
+```
 - возвращает оценку качества датасета в виде
 {
   "ok_for_model": true,
@@ -274,6 +276,25 @@ curl -X POST "http://127.0.0.1:8000/quality-from-csv" \
     "n_cols": 14
   }
 }
+
+Через Swagger:
+
+- в `/docs` открыть `POST /quality-flags-from-csv`,
+- нажать `Try it out`,
+- выбрать файл (например, `data/example.csv`),
+- нажать `Execute`.
+  - `summarize_dataset`,
+  - `missing_table`,
+  - `compute_quality_flags`;
+
+
+
+**Пример вызова через `curl` (Linux/macOS/WSL):**
+
+```bash
+curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
+  -F "file=@data/example.csv"
+```
 ## Структура проекта (упрощённо)
 
 ```text
