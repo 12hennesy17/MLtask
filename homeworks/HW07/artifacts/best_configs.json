@@ -1,0 +1,43 @@
+{
+  "dataset1": {
+    "selected_algorithm": "kmeans",
+    "reason": "higher silhouette (0.522) and better DB/CH metrics",
+    "criteria": "silhouette_score",
+    "best_params": {
+      "k": 2
+    },
+    "metrics": {
+      "silhouette": 0.522,
+      "davies_bouldin": 0.685,
+      "calinski_harabasz": 11787.0
+    }
+  },
+  "dataset2": {
+    "selected_algorithm": "dbscan",
+    "reason": "significantly better silhouette (0.545 vs 0.307) and DB metric",
+    "criteria": "silhouette_score",
+    "best_params": {
+      "eps": 0.8,
+      "min_samples": 15
+    },
+    "metrics": {
+      "silhouette": 0.545,
+      "davies_bouldin": 0.472,
+      "calinski_harabasz": 135.0
+    }
+  },
+  "dataset3": {
+    "selected_algorithm": "dbscan",
+    "reason": "higher silhouette score and detects noise",
+    "criteria": "silhouette_score",
+    "best_params": {
+      "eps": 0.8,
+      "min_samples": 3
+    },
+    "metrics": {
+      "silhouette": 0.373,
+      "davies_bouldin": 0.551,
+      "calinski_harabasz": 17.2
+    }
+  }
+}
