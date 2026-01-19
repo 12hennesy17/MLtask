@@ -1,4 +1,20 @@
 {
+  "metadata": {
+    "experiment": {
+      "name": "model_comparison",
+      "description": "Сравнение производительности различных моделей классификации",
+      "random_state": 42,
+      "test_size": 0.2,
+      "cv_folds": 5
+    },
+    "metrics_definitions": {
+      "accuracy": "Доля правильных предсказаний",
+      "f1": "F1-мера (гармоническое среднее precision и recall)",
+      "precision": "Точность (precision)",
+      "recall": "Полнота (recall)",
+      "roc_auc": "Площадь под ROC-кривой"
+    }
+  },
   "results": [
     {
       "accuracy": 0.93375,
@@ -40,5 +56,25 @@
       "roc_auc": 0.5136705855466965,
       "model": "Dummy(stratified)"
     }
-  ]
+  ],
+  "summary": {
+    "best_model": "HistGradient",
+    "best_accuracy": 0.93375,
+    "average_accuracy": 0.8263333333333334,
+    "models_tested": 5,
+    "performance_ranking": [
+      "HistGradient",
+      "RandomForest",
+      "DecisionTree",
+      "LogReg(scaled)",
+      "Dummy(stratified)"
+    ]
+  },
+  "analysis": {
+    "notes": "HistGradient показал наилучшие результаты",
+    "recommendations": [
+      "Использовать HistGradientBoosting для production",
+      "Провести дополнительную настройку гиперпараметров"
+    ]
+  }
 }
