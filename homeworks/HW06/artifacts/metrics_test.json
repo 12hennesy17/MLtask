@@ -2,6 +2,7 @@
   "metadata": {
     "experiment": {
       "name": "model_comparison",
+      "date": "2026-01-23T18:02:55.327650",
       "description": "Сравнение производительности различных моделей классификации",
       "random_state": 42,
       "test_size": 0.2,
@@ -15,48 +16,43 @@
       "roc_auc": "Площадь под ROC-кривой"
     }
   },
-  "results": [
-    {
+  "results": {
+    "HistGradient": {
       "accuracy": 0.93375,
       "f1": 0.8936454849498328,
       "precision": 0.9290681502086231,
       "recall": 0.8608247422680413,
-      "roc_auc": 0.9147104006906709,
-      "model": "HistGradient"
+      "roc_auc": 0.9147104006906709
     },
-    {
+    "RandomForest": {
       "accuracy": 0.9258333333333333,
       "f1": 0.8792401628222524,
       "precision": 0.9283667621776505,
       "recall": 0.8350515463917526,
-      "roc_auc": 0.9021316845259256,
-      "model": "RandomForest"
+      "roc_auc": 0.9021316845259256
     },
-    {
+    "DecisionTree": {
       "accuracy": 0.8691666666666666,
       "f1": 0.7942332896461337,
       "precision": 0.808,
       "recall": 0.7809278350515464,
-      "roc_auc": 0.846128942156315,
-      "model": "DecisionTree"
+      "roc_auc": 0.846128942156315
     },
-    {
+    "LogReg(scaled)": {
       "accuracy": 0.8275,
       "f1": 0.7076271186440678,
       "precision": 0.7828125,
       "recall": 0.645618556701031,
-      "roc_auc": 0.7800137118480523,
-      "model": "LogReg(scaled)"
+      "roc_auc": 0.7800137118480523
     },
-    {
+    "Dummy(stratified)": {
       "accuracy": 0.5754166666666667,
       "f1": 0.34045307443365697,
       "precision": 0.3420026007802341,
       "recall": 0.3389175257731959,
-      "roc_auc": 0.5136705855466965,
-      "model": "Dummy(stratified)"
+      "roc_auc": 0.5136705855466965
     }
-  ],
+  },
   "summary": {
     "best_model": "HistGradient",
     "best_accuracy": 0.93375,
