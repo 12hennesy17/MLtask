@@ -1,0 +1,20 @@
+{
+    "experiment_id": "E4",
+    "dataset": "EMNIST",
+    "seed": 42,
+    "model": {
+        "hidden_dims": [
+            256,
+            256,
+            128
+        ],
+        "activation": "ReLU",
+        "dropout": 0.0,
+        "batchnorm": true
+    },
+    "training": {
+        "optimizer": "Adam",
+        "lr": 0.001,
+        "weight_decay": 0
+    }
+}
