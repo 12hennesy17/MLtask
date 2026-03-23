@@ -1,8 +1,8 @@
-experiment_id, dataset, seed, model_summary                              , optimizer, lr   , momentum, weight_decay, epochs_trained, best_val_accuracy, best_val_loss
-E1           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=False  , Adam     , 0.001,      0.0,       0.0   ,             20,            0.8488,        0.4523
-E2           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0.4 / BN=False, Adam     , 0.001,      0.0,       0.0   ,             20,            0.819 ,        0.5578
-E3           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=True   , Adam     , 0.001,      0.0,       0.0   ,             20,            0.8578,        0.4355
-E4           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=True   , Adam     , 0.001,      0.0,       0.0   ,             20,            0.8547,        0.4687
-O1           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=True   , Adam     , 0.1  ,      0.0,       0.0   ,              7,            0.8235,        0.5509
-O2           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=True   , Adam     , 1e-05,      0.0,       0.0   ,              7,            0.7454,        1.0884
-O3           , EMNIST ,   42, 256-256-128 / ReLU / dropout=0 / BN=True   , SGD      , 0.001,      0.9,       0.0001,             15,            0.756 ,        0.9471
+experiment_id,dataset,seed,model_summary,optimizer,lr,momentum,weight_decay,epochs_trained,best_val_accuracy,best_val_loss
+E1,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=False,Adam,0.001,0.0,0.0,20,0.8488,0.4523
+E2,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.4; batchnorm=False,Adam,0.001,0.0,0.0,20,0.819,0.5578
+E3,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=True,Adam,0.001,0.0,0.0,20,0.8578,0.4355
+E4,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=True,Adam,0.001,0.0,0.0,20,0.8547,0.4687
+O1,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=True,Adam,0.1,0.0,0.0,7,0.8235,0.5509
+O2,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=True,Adam,1e-05,0.0,0.0,7,0.7454,1.0884
+O3,EMNIST_BALANCED,42,hidden=256-256-128; act=relu; dropout=0.0; batchnorm=True,SGD,0.001,0.9,0.0001,15,0.756,0.9471
