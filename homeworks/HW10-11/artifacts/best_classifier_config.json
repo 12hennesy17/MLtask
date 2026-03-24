@@ -1,0 +1,24 @@
+{
+    "dataset": "STL10",
+    "seed": 42,
+    "name": "resnet18",
+    "num_classes": 10,
+    "use_pretrained": true,
+    "weights_version": "ResNet18_Weights.DEFAULT",
+    "epochs": 3,
+    "learning_rate": 0.001,
+    "optimizer": "Adam",
+    "criterion": "CrossEntropyLoss",
+    "device": "cuda",
+    "image_size": 224,
+    "mean": [
+        0.485,
+        0.456,
+        0.406
+    ],
+    "std": [
+        0.229,
+        0.224,
+        0.225
+    ]
+}
