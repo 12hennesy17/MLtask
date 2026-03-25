@@ -1,7 +1,7 @@
 experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
-С1,classification,STL10,42,conv=32-64-128-256; pool=avg6x6; fc=512; act=relu,Adam,0.001,10,0.556,0.586,-,-,-,Base CNN without augmentations. 4 conv layers with MaxPool and AdaptiveAvgPool. Params: 5.1M
-С2,classification,STL10,42,conv=32-64-128-256; pool=avg6x6; fc=512; act=relu,Adam,0.001,10,0.606,0.607,-,-,-,Base CNN with augmentations. 4 conv layers with MaxPool and AdaptiveAvgPool. Params: 5.1M
-С3,classification,STL10,42,backbone=ResNet18 (partial); trainable=fc; weights=ImageNet,Adam,0.001,3,0.936,0.935,-,-,-,Fine-tuning of the block FC. Pretrained on ImageNet
-C4,classification,STL10,42,backbone=ResNet18 (partial); trainable=layer4+fc; weights=ImageNet,Adam,0.0001,3,0.955,0.952,-,-,-,Fine-tuning of the last conv block (layer4) and FC. Pretrained on ImageNet.
-V1,detection,PascalVOC,42,fasterrcnn_resnet50_fpn_v2,None (pretrained),-,-,-,-,0.01761643450119551,0.03968555851400788,0.8500499513964302,Inference V1: score_thr=0.3
-V2,detection,PascalVOC,42,fasterrcnn_resnet50_fpn_v2,None (pretrained),-,-,-,-,0.03432339166871862,0.03531127171294311,0.8669425185963753,Inference V2: score_thr=0.7
+С1,classification,STL10,42,conv=32-64-128-256; pool=avg6x6; fc=512; act=relu,Adam,0.001,10.0,0.556,,,,,Base CNN without augmentations. 4 conv layers with MaxPool and AdaptiveAvgPool. Params: 5.1M
+С2,classification,STL10,42,conv=32-64-128-256; pool=avg6x6; fc=512; act=relu,Adam,0.001,10.0,0.606,,,,,Base CNN with augmentations. 4 conv layers with MaxPool and AdaptiveAvgPool. Params: 5.1M
+С3,classification,STL10,42,backbone=ResNet18 (partial); trainable=fc; weights=ImageNet,Adam,0.001,3.0,0.936,,,,,Fine-tuning of the block FC. Pretrained on ImageNet
+C4,classification,STL10,42,backbone=ResNet18 (partial); trainable=layer4+fc; weights=ImageNet,Adam,0.0001,3.0,0.955,0.952,,,,Fine-tuning of the last conv block (layer4) and FC. Pretrained on ImageNet.
+V1,detection,PascalVOC,42,fasterrcnn_resnet50_fpn_v2,None (pretrained),-,,,-,0.01761643450119551,0.03968555851400788,0.8500499513964302,Inference V1: score_thr=0.3
+V2,detection,PascalVOC,42,fasterrcnn_resnet50_fpn_v2,None (pretrained),-,,,,0.03432339166871862,0.03531127171294311,0.8669425185963753,Inference V2: score_thr=0.7
