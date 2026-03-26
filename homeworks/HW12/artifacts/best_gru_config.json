@@ -1,0 +1,30 @@
+{
+    "experiment_id": "R1",
+    "task": "forecasting",
+    "dataset": "S12-hw-dataset.csv",
+    "seed": 42,
+    "window_size": 28,
+    "horizon": 1,
+    "scaler": "StandardScaler",
+    "features": [
+        "price",
+        "dow_sin",
+        "dow_cos",
+        "month_sin",
+        "month_cos",
+        "rolling_mean_7",
+        "lag_1"
+    ],
+    "model_type": "GRU",
+    "input_size": 7,
+    "hidden_size": 64,
+    "num_layers": 2,
+    "output_size": 1,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "batch_size": 32,
+    "epochs_trained": 30,
+    "val_rmse": 6.16631,
+    "test_rmse": 6.333729,
+    "test_mape": 3.242455
+}

@@ -1,0 +1,5 @@
+experiment_id,task,dataset,seed,split_summary,window_size,horizon,model_summary,features_summary,scaler,optimizer,lr,epochs_trained,best_val_mae,best_val_rmse,best_val_mape,test_mae,test_rmse,test_mape,notes
+B1,forecasting,S12-hw-dataset.csv,42,70/15/15,28,1,Naive baseline,lag_1,StandardScaler,,,,6.456132,8.242222,4.404486,,,,Last value prediction
+B2,forecasting,S12-hw-dataset.csv,42,70/15/15,28,1,Moving Average,rolling_mean_7,StandardScaler,,,,12.736007,15.282226,8.845402,,,,7-day window average
+B3,forecasting,S12-hw-dataset.csv,42,70/15/15,28,1,Ridge Regression,"lags, cyclic_time, rolling_mean",StandardScaler,,,,6.520155,8.020869,4.355426,,,,Ridge model with alpha=1.0
+R1,forecasting,S12-hw-dataset.csv,42,70/15/15,28,1,GRU,windowed sequence,StandardScaler,,,,4.807203,6.16631,3.219307,5.033072,6.333729,3.242455,Best model selected by val_rmse
