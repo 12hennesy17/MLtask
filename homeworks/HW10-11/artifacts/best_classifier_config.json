@@ -1,7 +1,7 @@
 {
     "dataset": "STL10",
     "seed": 42,
-    "name": "resnet18",
+    "model": "resnet18",
     "num_classes": 10,
     "use_pretrained": true,
     "weights_version": "ResNet18_Weights.DEFAULT",
