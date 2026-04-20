@@ -11,6 +11,7 @@ wheels/
 .env
 
 # Скрываем локальные логи
-*.log
+logs/*
+!logs/.gitkeep
 # Скрываем прод модель
 *.joblib
