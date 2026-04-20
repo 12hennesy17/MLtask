@@ -68,7 +68,7 @@ def _load_csv(
     encoding: str = "utf-8",
 ) -> pd.DataFrame:
     if not path.exists():
-        logger.error(f"Файл не найден: {path}") # <--- ЛОГ
+        logger.error(f"Файл не найден: {path}")
         raise typer.BadParameter(f"Файл '{path}' не найден")
     try:
         df = pd.read_csv(path, sep=sep, encoding=encoding)
@@ -114,7 +114,7 @@ def train(
         config = json.load(f)
     
     if 'base_models' not in config:
-        logger.critical("В JSON не найден ключ 'base_models'. Остановка.") # <--- ЛОГ
+        logger.critical("В JSON не найден ключ 'base_models'. Остановка.") 
         typer.secho("❌ Ошибка: В JSON не найден ключ 'base_models'", fg="red")
         raise typer.Exit()
 
