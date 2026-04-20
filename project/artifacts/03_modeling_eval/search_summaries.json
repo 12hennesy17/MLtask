@@ -1,0 +1,59 @@
+{
+    "Baseline_dummy": {
+        "strategy": "mean",
+        "best_score_rmse": 0.3996,
+        "best_score_mse": 0.1597,
+        "best_score_mae": 0.3102,
+        "best_score_r_2": -0.0007,
+        "notes": "Нулевая точка отсчета. Показывает точность при простом угадывании среднего значения цен."
+    },
+    "Lasso": {
+        "max_iter": 10000,
+        "best_params": {
+            "alpha": 0.0036783797718286343
+        },
+        "best_score_rmse": 0.1179,
+        "best_score_mse": 0.0139,
+        "best_score_mae": 0.0823,
+        "best_score_r_2": 0.9126,
+        "notes": "Lasso занулила 168 признаков из 264."
+    },
+    "HistGradientBoostingRegressor": {
+        "max_iter": 2000,
+        "best_params": {
+            "l2_regularization": 10.0,
+            "learning_rate": 0.03,
+            "max_iter": 2000,
+            "max_leaf_nodes": 3,
+            "min_samples_leaf": 5
+        },
+        "best_score_rmse": 0.1265,
+        "best_score_mse": 0.016,
+        "best_score_mae": 0.0887,
+        "best_score_r_2": 0.8996,
+        "notes": "Сходимость достигнута на 659 итерации благодаря Early Stopping."
+    },
+    "RandomForest": {
+        "best_params": {
+            "ccp_alpha": 0.0,
+            "max_depth": 20,
+            "max_features": 0.3,
+            "max_leaf_nodes": null,
+            "min_samples_leaf": 1,
+            "n_estimators": 300
+        },
+        "best_score_rmse": 0.132,
+        "best_score_mse": 0.0174,
+        "best_score_mae": 0.0904,
+        "best_score_r_2": 0.8907,
+        "notes": "Сходимость достигнута на уровне 300 деревьев."
+    },
+    "StackingRegressor": {
+        "meta_model": "Ridge",
+        "best_score_rmse": 0.1168,
+        "best_score_mse": 0.0136,
+        "best_score_mae": 0.0815,
+        "best_score_r_2": 0.9143,
+        "notes": "Финальный ансамбль: объединение сильных сторон Lasso и HGBR и RFRegressor через мета-модель Ridge."
+    }
+}

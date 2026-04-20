@@ -1,0 +1,165 @@
+# config/data_params.yaml
+
+# Списки колонок для обработки пропусков
+imputation:
+  mode_cols:
+    - Electrical
+    - MSZoning
+    - KitchenQual
+    - Exterior1st
+    - Exterior2nd
+    - SaleType
+    - Utilities
+    - Functional
+  none_cols:
+    - PoolQC
+    - MiscFeature
+    - Alley
+    - Fence
+    - FireplaceQu
+    - GarageType
+    - GarageFinish
+    - GarageQual
+    - GarageCond
+    - BsmtQual
+    - BsmtCond
+    - BsmtExposure
+    - BsmtFinType1
+    - BsmtFinType2
+    - MasVnrType
+  zero_cols:
+    - GarageYrBlt
+    - GarageArea
+    - GarageCars
+    - BsmtFinSF1
+    - BsmtFinSF2
+    - BsmtUnfSF
+    - TotalBsmtSF
+    - BsmtFullBath
+    - BsmtHalfBath
+    - MasVnrArea
+
+# Колонки на удаление
+cols_to_drop:
+  - MiscVal
+  - MoSold
+  - LowQualFinSF
+  - Alley
+  - Street
+  - Utilities
+  - PoolArea
+  - Condition2
+  - GarageCars
+  - GrLivArea
+  - Heating
+  - YearRemodAdd
+  - TotRmsAbvGrd
+  - Condition1
+  - LotFrontage
+  - GarageYrBlt
+  - KitchenAbvGr
+  - YrSold
+  - YearBuilt
+  - PoolQC
+  - MiscFeature
+  - FullBath
+  - HalfBath
+  - BsmtFullBath
+  - BsmtHalfBath
+  - 1stFlrSF
+  - 2ndFlrSF
+  - Fence
+  - BedroomAbvGr
+  - OpenPorchSF
+  - BsmtFinSF2
+  - 3SsnPorch
+  - OverallCond
+  - LotArea
+  - ScreenPorch
+  - BsmtUnfSF
+  - TotalBsmtSF
+  - RoofMatl
+  - Exterior1st
+
+# Маппинги для категориальных признаков
+ordinal_mappings:
+  ExterQual: &std_qual
+    Ex: 5
+    Gd: 4
+    TA: 3
+    Fa: 2
+    Po: 1
+    None: 0
+    NA: 0
+  ExterCond: *std_qual
+  BsmtQual: *std_qual
+  BsmtCond: *std_qual
+  KitchenQual: *std_qual
+  GarageQual: *std_qual
+  HeatingQC: *std_qual
+  FireplaceQu: *std_qual
+  GarageCond: *std_qual
+  BsmtExposure:
+    Gd: 4
+    Av: 3
+    Mn: 2
+    No: 1
+    None: 0
+    NA: 0
+  BsmtFinType1: &bsmt_fin
+    GLQ: 6
+    ALQ: 5
+    BLQ: 4
+    Rec: 3
+    LwQ: 2
+    Unf: 1
+    None: 0
+    NA: 0
+  BsmtFinType2: *bsmt_fin
+  LotShape:
+    Reg: 0
+    IR3: 1
+    IR2: 2
+    IR1: 3
+  LandSlope:
+    Gtl: 2
+    Mod: 1
+    Sev: 0
+  Electrical:
+    SBrkr: 5
+    FuseA: 4
+    FuseF: 3
+    FuseP: 2
+    Mix: 1
+  Functional:
+    Typ: 7
+    Min1: 6
+    Min2: 5
+    Mod: 4
+    Maj1: 3
+    Maj2: 2
+    Sev: 1
+    Sal: 0
+  GarageFinish:
+    Fin: 3
+    RFn: 2
+    Unf: 1
+    None: 0
+    NA: 0
+  PavedDrive:
+    Y: 2
+    P: 1
+    N: 0
+  CentralAir:
+    Y: 1
+    N: 0
+ 
+
+feature_engineering:
+  road_categories: ['Artery', 'Feedr']
+  rail_categories: ['RRNn', 'RRAn', 'RRNe', 'RRAe']
+  pos_features: ['PosN', 'PosA']
+  standard_roof: 'CompShg'
+  standard_heating: 'GasA'
+  distressed_conditions: ['Abnorml', 'Family']
+  distressed_types: ['COD', 'ConLD', 'ConLI', 'ConLw']

@@ -1,0 +1,6 @@
+Model,R2,RMSE,MAE,MSE
+Stacking,0.9143,0.1168,0.0815,0.0136
+Lasso,0.9126,0.1179,0.0823,0.0139
+HistGradientBoosting,0.8996,0.1265,0.0887,0.016
+RandomForest,0.8907,0.132,0.0904,0.0174
+Baseline (Dummy),-0.0007,0.3996,0.3102,0.1597

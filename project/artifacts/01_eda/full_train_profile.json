@@ -1,0 +1,1460 @@
+{
+    "n_rows": 1460,
+    "n_cols": 81,
+    "columns": [
+        {
+            "name": "Id",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 1460,
+            "example_values": [
+                "1",
+                "2",
+                "3"
+            ],
+            "is_numeric": true,
+            "min": 1.0,
+            "max": 1460.0,
+            "mean": 730.5,
+            "std": 421.6100093688479
+        },
+        {
+            "name": "MSSubClass",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 15,
+            "example_values": [
+                "60",
+                "20",
+                "70"
+            ],
+            "is_numeric": true,
+            "min": 20.0,
+            "max": 190.0,
+            "mean": 56.897260273972606,
+            "std": 42.300570993810425
+        },
+        {
+            "name": "MSZoning",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "RL",
+                "RM",
+                "C (all)"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "LotFrontage",
+            "dtype": "float64",
+            "non_null": 1201,
+            "missing": 259,
+            "missing_share": 0.1773972602739726,
+            "unique": 110,
+            "example_values": [
+                "65.0",
+                "80.0",
+                "68.0"
+            ],
+            "is_numeric": true,
+            "min": 21.0,
+            "max": 313.0,
+            "mean": 70.04995836802665,
+            "std": 24.284751774483208
+        },
+        {
+            "name": "LotArea",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 1073,
+            "example_values": [
+                "8450",
+                "9600",
+                "11250"
+            ],
+            "is_numeric": true,
+            "min": 1300.0,
+            "max": 215245.0,
+            "mean": 10516.828082191782,
+            "std": 9981.26493237915
+        },
+        {
+            "name": "Street",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 2,
+            "example_values": [
+                "Pave",
+                "Grvl"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Alley",
+            "dtype": "str",
+            "non_null": 91,
+            "missing": 1369,
+            "missing_share": 0.9376712328767123,
+            "unique": 2,
+            "example_values": [
+                "Grvl",
+                "Pave"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "LotShape",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "Reg",
+                "IR1",
+                "IR2"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "LandContour",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "Lvl",
+                "Bnk",
+                "Low"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Utilities",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 2,
+            "example_values": [
+                "AllPub",
+                "NoSeWa"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "LotConfig",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "Inside",
+                "FR2",
+                "Corner"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "LandSlope",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 3,
+            "example_values": [
+                "Gtl",
+                "Mod",
+                "Sev"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Neighborhood",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 25,
+            "example_values": [
+                "CollgCr",
+                "Veenker",
+                "Crawfor"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Condition1",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 9,
+            "example_values": [
+                "Norm",
+                "Feedr",
+                "PosN"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Condition2",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 8,
+            "example_values": [
+                "Norm",
+                "Artery",
+                "RRNn"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BldgType",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "1Fam",
+                "2fmCon",
+                "Duplex"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "HouseStyle",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 8,
+            "example_values": [
+                "2Story",
+                "1Story",
+                "1.5Fin"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "OverallQual",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 10,
+            "example_values": [
+                "7",
+                "6",
+                "8"
+            ],
+            "is_numeric": true,
+            "min": 1.0,
+            "max": 10.0,
+            "mean": 6.0993150684931505,
+            "std": 1.3829965467415934
+        },
+        {
+            "name": "OverallCond",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 9,
+            "example_values": [
+                "5",
+                "8",
+                "6"
+            ],
+            "is_numeric": true,
+            "min": 1.0,
+            "max": 9.0,
+            "mean": 5.575342465753424,
+            "std": 1.1127993367127316
+        },
+        {
+            "name": "YearBuilt",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 112,
+            "example_values": [
+                "2003",
+                "1976",
+                "2001"
+            ],
+            "is_numeric": true,
+            "min": 1872.0,
+            "max": 2010.0,
+            "mean": 1971.267808219178,
+            "std": 30.202904042525258
+        },
+        {
+            "name": "YearRemodAdd",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 61,
+            "example_values": [
+                "2003",
+                "1976",
+                "2002"
+            ],
+            "is_numeric": true,
+            "min": 1950.0,
+            "max": 2010.0,
+            "mean": 1984.8657534246574,
+            "std": 20.645406807709413
+        },
+        {
+            "name": "RoofStyle",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 6,
+            "example_values": [
+                "Gable",
+                "Hip",
+                "Gambrel"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "RoofMatl",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 8,
+            "example_values": [
+                "CompShg",
+                "WdShngl",
+                "Metal"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Exterior1st",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 15,
+            "example_values": [
+                "VinylSd",
+                "MetalSd",
+                "Wd Sdng"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Exterior2nd",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 16,
+            "example_values": [
+                "VinylSd",
+                "MetalSd",
+                "Wd Shng"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "MasVnrType",
+            "dtype": "str",
+            "non_null": 588,
+            "missing": 872,
+            "missing_share": 0.5972602739726027,
+            "unique": 3,
+            "example_values": [
+                "BrkFace",
+                "Stone",
+                "BrkCmn"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "MasVnrArea",
+            "dtype": "float64",
+            "non_null": 1452,
+            "missing": 8,
+            "missing_share": 0.005479452054794521,
+            "unique": 327,
+            "example_values": [
+                "196.0",
+                "0.0",
+                "162.0"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 1600.0,
+            "mean": 103.68526170798899,
+            "std": 181.0662065872166
+        },
+        {
+            "name": "ExterQual",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "Gd",
+                "TA",
+                "Ex"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "ExterCond",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "TA",
+                "Gd",
+                "Fa"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Foundation",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 6,
+            "example_values": [
+                "PConc",
+                "CBlock",
+                "BrkTil"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtQual",
+            "dtype": "str",
+            "non_null": 1423,
+            "missing": 37,
+            "missing_share": 0.025342465753424658,
+            "unique": 4,
+            "example_values": [
+                "Gd",
+                "TA",
+                "Ex"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtCond",
+            "dtype": "str",
+            "non_null": 1423,
+            "missing": 37,
+            "missing_share": 0.025342465753424658,
+            "unique": 4,
+            "example_values": [
+                "TA",
+                "Gd",
+                "Fa"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtExposure",
+            "dtype": "str",
+            "non_null": 1422,
+            "missing": 38,
+            "missing_share": 0.026027397260273973,
+            "unique": 4,
+            "example_values": [
+                "No",
+                "Gd",
+                "Mn"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtFinType1",
+            "dtype": "str",
+            "non_null": 1423,
+            "missing": 37,
+            "missing_share": 0.025342465753424658,
+            "unique": 6,
+            "example_values": [
+                "GLQ",
+                "ALQ",
+                "Unf"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtFinSF1",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 637,
+            "example_values": [
+                "706",
+                "978",
+                "486"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 5644.0,
+            "mean": 443.6397260273973,
+            "std": 456.0980908409277
+        },
+        {
+            "name": "BsmtFinType2",
+            "dtype": "str",
+            "non_null": 1422,
+            "missing": 38,
+            "missing_share": 0.026027397260273973,
+            "unique": 6,
+            "example_values": [
+                "Unf",
+                "BLQ",
+                "ALQ"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "BsmtFinSF2",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 144,
+            "example_values": [
+                "0",
+                "32",
+                "668"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 1474.0,
+            "mean": 46.54931506849315,
+            "std": 161.31927280654173
+        },
+        {
+            "name": "BsmtUnfSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 780,
+            "example_values": [
+                "150",
+                "284",
+                "434"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 2336.0,
+            "mean": 567.2404109589041,
+            "std": 441.86695529243417
+        },
+        {
+            "name": "TotalBsmtSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 721,
+            "example_values": [
+                "856",
+                "1262",
+                "920"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 6110.0,
+            "mean": 1057.4294520547944,
+            "std": 438.7053244594708
+        },
+        {
+            "name": "Heating",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 6,
+            "example_values": [
+                "GasA",
+                "GasW",
+                "Grav"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "HeatingQC",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "Ex",
+                "Gd",
+                "TA"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "CentralAir",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 2,
+            "example_values": [
+                "Y",
+                "N"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Electrical",
+            "dtype": "str",
+            "non_null": 1459,
+            "missing": 1,
+            "missing_share": 0.0006849315068493151,
+            "unique": 5,
+            "example_values": [
+                "SBrkr",
+                "FuseF",
+                "FuseA"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "1stFlrSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 753,
+            "example_values": [
+                "856",
+                "1262",
+                "920"
+            ],
+            "is_numeric": true,
+            "min": 334.0,
+            "max": 4692.0,
+            "mean": 1162.626712328767,
+            "std": 386.5877380410744
+        },
+        {
+            "name": "2ndFlrSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 417,
+            "example_values": [
+                "854",
+                "0",
+                "866"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 2065.0,
+            "mean": 346.99246575342465,
+            "std": 436.5284358862568
+        },
+        {
+            "name": "LowQualFinSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 24,
+            "example_values": [
+                "0",
+                "360",
+                "513"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 572.0,
+            "mean": 5.844520547945206,
+            "std": 48.62308143352019
+        },
+        {
+            "name": "GrLivArea",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 861,
+            "example_values": [
+                "1710",
+                "1262",
+                "1786"
+            ],
+            "is_numeric": true,
+            "min": 334.0,
+            "max": 5642.0,
+            "mean": 1515.463698630137,
+            "std": 525.4803834232025
+        },
+        {
+            "name": "BsmtFullBath",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "1",
+                "0",
+                "2"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 3.0,
+            "mean": 0.42534246575342466,
+            "std": 0.5189106060898065
+        },
+        {
+            "name": "BsmtHalfBath",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 3,
+            "example_values": [
+                "0",
+                "1",
+                "2"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 2.0,
+            "mean": 0.057534246575342465,
+            "std": 0.23875264627921178
+        },
+        {
+            "name": "FullBath",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "2",
+                "1",
+                "3"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 3.0,
+            "mean": 1.5650684931506849,
+            "std": 0.5509158012954317
+        },
+        {
+            "name": "HalfBath",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 3,
+            "example_values": [
+                "1",
+                "0",
+                "2"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 2.0,
+            "mean": 0.38287671232876713,
+            "std": 0.5028853810928914
+        },
+        {
+            "name": "BedroomAbvGr",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 8,
+            "example_values": [
+                "3",
+                "4",
+                "1"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 8.0,
+            "mean": 2.8664383561643834,
+            "std": 0.8157780441442284
+        },
+        {
+            "name": "KitchenAbvGr",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "1",
+                "2",
+                "3"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 3.0,
+            "mean": 1.0465753424657533,
+            "std": 0.22033819838403068
+        },
+        {
+            "name": "KitchenQual",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "Gd",
+                "TA",
+                "Ex"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "TotRmsAbvGrd",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 12,
+            "example_values": [
+                "8",
+                "6",
+                "7"
+            ],
+            "is_numeric": true,
+            "min": 2.0,
+            "max": 14.0,
+            "mean": 6.517808219178082,
+            "std": 1.6253932905840505
+        },
+        {
+            "name": "Functional",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 7,
+            "example_values": [
+                "Typ",
+                "Min1",
+                "Maj1"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Fireplaces",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 4,
+            "example_values": [
+                "0",
+                "1",
+                "2"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 3.0,
+            "mean": 0.613013698630137,
+            "std": 0.6446663863122295
+        },
+        {
+            "name": "FireplaceQu",
+            "dtype": "str",
+            "non_null": 770,
+            "missing": 690,
+            "missing_share": 0.4726027397260274,
+            "unique": 5,
+            "example_values": [
+                "TA",
+                "Gd",
+                "Fa"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "GarageType",
+            "dtype": "str",
+            "non_null": 1379,
+            "missing": 81,
+            "missing_share": 0.05547945205479452,
+            "unique": 6,
+            "example_values": [
+                "Attchd",
+                "Detchd",
+                "BuiltIn"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "GarageYrBlt",
+            "dtype": "float64",
+            "non_null": 1379,
+            "missing": 81,
+            "missing_share": 0.05547945205479452,
+            "unique": 97,
+            "example_values": [
+                "2003.0",
+                "1976.0",
+                "2001.0"
+            ],
+            "is_numeric": true,
+            "min": 1900.0,
+            "max": 2010.0,
+            "mean": 1978.5061638868744,
+            "std": 24.689724768590242
+        },
+        {
+            "name": "GarageFinish",
+            "dtype": "str",
+            "non_null": 1379,
+            "missing": 81,
+            "missing_share": 0.05547945205479452,
+            "unique": 3,
+            "example_values": [
+                "RFn",
+                "Unf",
+                "Fin"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "GarageCars",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "2",
+                "3",
+                "1"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 4.0,
+            "mean": 1.7671232876712328,
+            "std": 0.7473150101111095
+        },
+        {
+            "name": "GarageArea",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 441,
+            "example_values": [
+                "548",
+                "460",
+                "608"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 1418.0,
+            "mean": 472.9801369863014,
+            "std": 213.80484145338042
+        },
+        {
+            "name": "GarageQual",
+            "dtype": "str",
+            "non_null": 1379,
+            "missing": 81,
+            "missing_share": 0.05547945205479452,
+            "unique": 5,
+            "example_values": [
+                "TA",
+                "Fa",
+                "Gd"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "GarageCond",
+            "dtype": "str",
+            "non_null": 1379,
+            "missing": 81,
+            "missing_share": 0.05547945205479452,
+            "unique": 5,
+            "example_values": [
+                "TA",
+                "Fa",
+                "Gd"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "PavedDrive",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 3,
+            "example_values": [
+                "Y",
+                "N",
+                "P"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "WoodDeckSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 274,
+            "example_values": [
+                "0",
+                "298",
+                "192"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 857.0,
+            "mean": 94.2445205479452,
+            "std": 125.3387943517241
+        },
+        {
+            "name": "OpenPorchSF",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 202,
+            "example_values": [
+                "61",
+                "0",
+                "42"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 547.0,
+            "mean": 46.66027397260274,
+            "std": 66.25602767664971
+        },
+        {
+            "name": "EnclosedPorch",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 120,
+            "example_values": [
+                "0",
+                "272",
+                "228"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 552.0,
+            "mean": 21.954109589041096,
+            "std": 61.1191486017286
+        },
+        {
+            "name": "3SsnPorch",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 20,
+            "example_values": [
+                "0",
+                "320",
+                "407"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 508.0,
+            "mean": 3.4095890410958902,
+            "std": 29.31733055678188
+        },
+        {
+            "name": "ScreenPorch",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 76,
+            "example_values": [
+                "0",
+                "176",
+                "198"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 480.0,
+            "mean": 15.060958904109588,
+            "std": 55.757415281874174
+        },
+        {
+            "name": "PoolArea",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 8,
+            "example_values": [
+                "0",
+                "512",
+                "648"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 738.0,
+            "mean": 2.758904109589041,
+            "std": 40.17730694453019
+        },
+        {
+            "name": "PoolQC",
+            "dtype": "str",
+            "non_null": 7,
+            "missing": 1453,
+            "missing_share": 0.9952054794520548,
+            "unique": 3,
+            "example_values": [
+                "Ex",
+                "Fa",
+                "Gd"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "Fence",
+            "dtype": "str",
+            "non_null": 281,
+            "missing": 1179,
+            "missing_share": 0.8075342465753425,
+            "unique": 4,
+            "example_values": [
+                "MnPrv",
+                "GdWo",
+                "GdPrv"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "MiscFeature",
+            "dtype": "str",
+            "non_null": 54,
+            "missing": 1406,
+            "missing_share": 0.963013698630137,
+            "unique": 4,
+            "example_values": [
+                "Shed",
+                "Gar2",
+                "Othr"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "MiscVal",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 21,
+            "example_values": [
+                "0",
+                "700",
+                "350"
+            ],
+            "is_numeric": true,
+            "min": 0.0,
+            "max": 15500.0,
+            "mean": 43.489041095890414,
+            "std": 496.12302445794415
+        },
+        {
+            "name": "MoSold",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 12,
+            "example_values": [
+                "2",
+                "5",
+                "9"
+            ],
+            "is_numeric": true,
+            "min": 1.0,
+            "max": 12.0,
+            "mean": 6.321917808219178,
+            "std": 2.7036262083595126
+        },
+        {
+            "name": "YrSold",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 5,
+            "example_values": [
+                "2008",
+                "2007",
+                "2006"
+            ],
+            "is_numeric": true,
+            "min": 2006.0,
+            "max": 2010.0,
+            "mean": 2007.8157534246575,
+            "std": 1.3280951205521099
+        },
+        {
+            "name": "SaleType",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 9,
+            "example_values": [
+                "WD",
+                "New",
+                "COD"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "SaleCondition",
+            "dtype": "str",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 6,
+            "example_values": [
+                "Normal",
+                "Abnorml",
+                "Partial"
+            ],
+            "is_numeric": false,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "std": null
+        },
+        {
+            "name": "SalePrice",
+            "dtype": "int64",
+            "non_null": 1460,
+            "missing": 0,
+            "missing_share": 0.0,
+            "unique": 663,
+            "example_values": [
+                "208500",
+                "181500",
+                "223500"
+            ],
+            "is_numeric": true,
+            "min": 34900.0,
+            "max": 755000.0,
+            "mean": 180921.19589041095,
+            "std": 79442.50288288662
+        }
+    ]
+}

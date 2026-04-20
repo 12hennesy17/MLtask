@@ -1,0 +1,27 @@
+# Основные параметры
+general:
+  random_state: 42
+  target: "SalePrice"
+
+# Структура папок (относительно корня проекта)
+dirs:
+  artifacts: "artifacts"
+  data_raw: "data/raw"
+  models: "models"
+  configs: "configs"
+  logs: "logs"
+# Подпапки внутри artifacts
+artifacts_subdirs:
+  eda: "01_eda"
+  eda_figures: "01_eda/figures"
+  features: "02_fe"
+  modeling: "03_modeling_eval"
+  modeling_figures: "03_modeling_eval/figures"
+  cli_base: "cli"
+  cli_submissions: "cli/submissions"
+  cli_reports: "cli/reports"
+
+# Файлы данных
+files:
+  train: "train.csv"
+  test: "test.csv"

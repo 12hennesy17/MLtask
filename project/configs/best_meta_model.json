@@ -1,0 +1,28 @@
+{
+    "architecture": "StackingRegressor(Lasso, RF, HGBR -> Ridge)",
+    "meta_model": "Ridge(alpha=1.0)",
+    "base_models": {
+        "lasso": {
+            "alpha": 0.0036783797718286343
+        },
+        "hgb": {
+            "l2_regularization": 10.0,
+            "learning_rate": 0.03,
+            "max_iter": 2000,
+            "max_leaf_nodes": 3,
+            "min_samples_leaf": 5
+        },
+        "rf": {
+            "ccp_alpha": 0.0,
+            "max_depth": 20,
+            "max_features": 0.3,
+            "max_leaf_nodes": null,
+            "min_samples_leaf": 1,
+            "n_estimators": 300
+        }
+    },
+    "r2": 0.9143,
+    "rmse": 0.1168,
+    "mae": 0.0815,
+    "mse": 0.0136
+}
