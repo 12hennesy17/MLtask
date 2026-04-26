@@ -96,7 +96,7 @@ class CombinedFeaturesAdded(BaseEstimator, TransformerMixin):
         with open(os.path.join(config.TRAIN_PARAMS_DIR, 'data_params.yaml'), 'r', encoding='utf-8') as f:
             params = yaml.safe_load(f)
         
-        # 2. Раскладываем параметры по атрибутам класса
+        # Раскладываем параметры по атрибутам класса
         self.fe_params = params['feature_engineering']
         self.cols_to_drop = params['cols_to_drop']
         
@@ -106,7 +106,7 @@ class CombinedFeaturesAdded(BaseEstimator, TransformerMixin):
     def transform(self, X):
         X_copy = X.copy()
         fe = self.fe_params
-        # 1. Локация и инфраструктура
+        # Локация и инфраструктура
         X_copy['IsNearRoad'] = X_copy['Condition1'].isin(fe['road_categories']).astype(int)
         X_copy['IsNearRail'] = X_copy['Condition1'].isin(fe['rail_categories']).astype(int)
         X_copy['IsNearPosFeature'] = X_copy['Condition1'].isin(fe['pos_features']).astype(int)
@@ -130,7 +130,7 @@ class CombinedFeaturesAdded(BaseEstimator, TransformerMixin):
       
         X_copy['Has3SsnPorch'] = (X_copy['3SsnPorch'] != 0).astype(int)
 
-        # 3. Качество и состояние
+        # Качество и состояние
         X_copy['HasPool'] = np.where(X_copy['PoolQC'] == 'None', 0, 1)
         X_copy['HasMiscFeature'] = np.where(X_copy['MiscFeature'] == 'None', 0, 1)
         X_copy['HasFence'] = np.where(X_copy['Fence'] == 'None', 0, 1)
@@ -141,14 +141,14 @@ class CombinedFeaturesAdded(BaseEstimator, TransformerMixin):
         X_copy['IsNonStandardExterior'] = (X_copy['Exterior1st'] != X_copy['Exterior2nd']).astype(int)
         X_copy['Has_Standard_Heating'] = (X_copy['Heating'] != fe['standard_heating']).astype(int)
     
-        # 4. Временные признаки
+        # Временные признаки
         X_copy['HouseAge'] = X_copy['YrSold'] - X_copy['YearBuilt']
         X_copy['YearsSinceRemod'] = X_copy['YrSold'] - X_copy['YearRemodAdd']
         X_copy['MSSubClass'] = X_copy['MSSubClass'].astype(str)
         X_copy['MoSold_sin'] = np.sin(2 * np.pi * X_copy['MoSold'] / 12)
         X_copy['MoSold_cos'] = np.cos(2 * np.pi * X_copy['MoSold'] / 12)
 
-        # 5. Бизнес-фичи
+        # Бизнес-фичи
         X_copy['Is_New_Construction'] = ((X_copy['SaleType'] == 'New') | 
                                         (X_copy['SaleCondition'] == 'Partial')).astype(int)
         

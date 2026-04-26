@@ -89,7 +89,6 @@ def plot_mi_scores(
         print(f"Признаков для отображения не найдено.")
         return
 
-    # Сортируем для красоты графика
     scores = scores.sort_values(ascending=False)
 
     plt.figure(figsize=(10, max(4, len(scores) * 0.4)))
@@ -316,9 +315,7 @@ def plot_permutation_importance(importance_df, model_name="Model", save_path=Non
 def plot_pdp_top_features(model, X, feature_names, importance_df, top_n=5, save_path=None):
     """Автоматический PDP для топ-N признаков из таблицы важности."""
     top_idx = importance_df.head(top_n).index
-    # Находим индексы признаков в исходной матрице X
-    # (Если X - numpy, индексы берем из importance_df напрямую)
-    
+    # Находим индексы признаков в исходной матрице X   
     fig, ax = plt.subplots(figsize=(15, 10))
     PartialDependenceDisplay.from_estimator(
         model, X, features=top_idx, 

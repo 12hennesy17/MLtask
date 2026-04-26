@@ -18,8 +18,6 @@ from .logger_setup import setup_logging
 
 # --- Локальные ML-модули ---
 from .config import *
-# ВАЖНО: Импортируем кастомные трансформеры ДО загрузки модели через joblib,
-# чтобы избежать AttributeError при десериализации пайплайна.
 from .transformers import CombinedFeaturesAdded 
 from .core import compute_quality_flags, missing_table, summarize_dataset
 
@@ -57,7 +55,7 @@ app = FastAPI(
 )
 
 
-# --- 2. Схемы данных (Pydantic Models) ---
+# --- Схемы данных (Pydantic Models) ---
 
 class QualityRequest(BaseModel):
     """Агрегированные признаки датасета – 'фичи' для заглушки модели."""
@@ -84,7 +82,7 @@ class QualityResponse(BaseModel):
     latency_ms: float = Field(..., ge=0.0, description="Время обработки запроса, мс")
     flags: dict[str, bool] | None = Field(default=None, description="Булевы флаги (too_few_rows и т.д.)")
     dataset_shape: dict[str, int] | None = Field(default=None, description="Размеры датасета")
-# --- 3. Эндпоинты: Системные ---
+# --- Эндпоинт: Системный ---
 
 @app.get("/health", tags=["System"])
 def healthcheck() -> dict[str, Any]:
@@ -106,7 +104,7 @@ def healthcheck() -> dict[str, Any]:
     }
 
 
-# --- 4. Эндпоинты: Инференс (ML Predictions) ---
+# --- Эндпоинт: Инференс (ML Predictions) ---
 
 @app.post("/predict/csv", tags=["Inference"])
 async def predict_from_csv(file: UploadFile = File(...)):
@@ -146,7 +144,7 @@ async def predict_from_csv(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=f"Ошибка обработки: {str(e)}")
 
 
-# --- 5. Эндпоинты: Качество данных (EDA / Quality) ---
+# --- Эндпоинт: Качество данных (EDA / Quality) ---
 
 @app.post("/quality", response_model=QualityResponse, tags=["Quality"])
 def quality(req: QualityRequest) -> QualityResponse:

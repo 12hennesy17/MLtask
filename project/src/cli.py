@@ -128,7 +128,7 @@ def train(
         final_estimator=Ridge(alpha=1.0) 
     )
 
-    # 5. Обучение   
+    # Обучение   
     final_pipeline = get_pipeline(model=stacking_reg)   
     logger.info("🛠 Запуск процесса обучения пайплайна...")
     final_pipeline.fit(X, y)
@@ -213,7 +213,7 @@ def report(
     out_dir.mkdir(parents=True, exist_ok=True)
     df = _load_csv(path)
 
-    # 1. Аналитика (расчеты)
+    # Аналитика (расчеты)
     logger.info("⚙️ Расчет статистик...")
     summary = summarize_dataset(df)
     missing_df = missing_table(df)
@@ -232,7 +232,7 @@ def report(
     if not corr_df.empty:
         corr_df.to_csv(out_dir / "correlation.csv")
 
-    # 2. Визуализация и сохранение файлов
+    # Визуализация и сохранение файлов
     logger.info("🎨 Генерация графиков...")
     plot_target_distribution(df[TARGET], save_path=out_dir / "target_dist.png")
     plot_missing_values(df, save_path=out_dir / "missing_values.png")
@@ -246,7 +246,7 @@ def report(
     if cat_cols:
         plot_categorical_impact(df, cat_cols[:8], target=TARGET, save_path=out_dir / "cat_impact.png")
 
-    # 3. Генерация Markdown-отчёта
+    # Генерация Markdown-отчёта
     md_path = out_dir / "report.md"
     with md_path.open("w", encoding="utf-8") as f:
         f.write(f"# EDA-отчёт: {Path(path).name}\n\n")

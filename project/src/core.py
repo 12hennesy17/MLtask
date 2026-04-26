@@ -55,7 +55,7 @@ class DatasetSummary:
     n_rows: int
     n_cols: int
     columns: list[ColumnSummary]
-
+    
     def to_dict(self) -> Dict[str, Any]:
         return {
             "n_rows": self.n_rows,
@@ -180,7 +180,7 @@ def get_low_variance_report(df: pd.DataFrame, threshold: float = 0.93) -> pd.Dat
                     'unique_count': df[col].nunique()
                 })
     
-    # Создаем отчет и сортируем по убыванию доминирования
+    # Создаем табличку и сортируем по убыванию доминирования
     report_df = pd.DataFrame(report_data)
     if not report_df.empty:
         return report_df.sort_values(by='share_%', ascending=False).reset_index(drop=True)
@@ -225,13 +225,6 @@ def compute_metrics(y_true, y_pred):
         'R2': r2_score(y_true, y_pred)
     }
 
-def get_pdp_data(model, X, feature_name):
-    """Рассчитывает данные для Partial Dependence Plot."""
-    pdp_results = partial_dependence(model, X, [feature_name], kind="average")
-    return {
-        "values": pdp_results['values'][0],
-        "average": pdp_results['average'][0]
-    }
 
 def get_residuals_analysis(y_true, y_pred):
     """Возвращает DataFrame с истинными значениями, предсказаниями и остатками."""
@@ -259,7 +252,7 @@ def check_imputation_completeness(df: pd.DataFrame):
     """Проверка, что после всех MissingValueImputer не осталось NaN."""
     missing = df.isnull().sum()
     if missing.sum() > 0:
-        print("⚠️ Обнаружены дыры после импутации:")
+        print("⚠️ Обнаружены пропуски после импутации:")
         print(missing[missing > 0])
     else:
         print("✅ Данные полностью заполнены.")
@@ -275,7 +268,7 @@ def correlation_matrix(df: pd.DataFrame) -> pd.DataFrame:
 
 def get_mi_scores(X: pd.DataFrame, y: pd.Series, random_state: int = 42) -> pd.Series:
     """
-    Считает Mutual Information для ВСЕХ признаков (числовых и категориальных).
+    Считает Mutual Information для признаков (числовых и категориальных).
     """
     X = X.copy()
     
@@ -484,7 +477,6 @@ def compute_quality_flags(summary, missing_df: pd.DataFrame) -> Dict[str, Any]:
     flags["cols_to_drop_constant"] = constant_cols 
 
     # 3. --- Дубликаты ID ---
-    # Делаем код короче и читаемее
     id_col = next((c for c in summary.columns if c.name.lower() in ['id', 'user_id']), None)
     flags["has_suspicious_id_duplicates"] = (id_col.unique < summary.n_rows) if id_col else False
 

@@ -110,7 +110,7 @@ uv run python -m src.api         # пример: FastAPI/Flask сервис
     - Входные параметры: Файл формата .csv. Файл должен содержать признаки, использованные при обучении. Поле Id является опциональным.
   - POST /quality
     - Назначение: Быстрая проверка "пригодности" данных на основе агрегированных метрик.
-    - Принимает (JSON): * n_rows, n_cols, max_missing_share, numeric_cols, categorical_cols.
+    - Принимает (JSON): n_rows, n_cols, max_missing_share, numeric_cols, categorical_cols.
     - Возвращает: Оценку качества quality_score (0–1) и флаги проблем (например, too_few_rows).
   - POST /quality-from-csv
     -  Назначение: Полный автоматизированный анализ качества данных из CSV.
